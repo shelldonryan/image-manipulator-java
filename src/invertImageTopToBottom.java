@@ -12,14 +12,14 @@ public class invertImageTopToBottom {
         int width = image.getWidth();
         int height = image.getHeight();
 
-        for (int column = 0; column < width; column++) {
-            for (int line = 0; line < height / 2; line++) {
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height / 2; y++) {
 
-                int topImagePixel = image.getRGB(column, line);
-                int bottomImagePixel = image.getRGB(column, height - line - 1);
+                int topImagePixel = image.getRGB(x, y);
+                int bottomImagePixel = image.getRGB(x, height - y - 1);
 
-                image.setRGB(column, line, bottomImagePixel);
-                image.setRGB(column, height - line - 1, topImagePixel);
+                image.setRGB(x, y, bottomImagePixel);
+                image.setRGB(x, height - y - 1, topImagePixel);
             }
         }
 

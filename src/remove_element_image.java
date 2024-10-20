@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class remove_element_image {
     public static void main(String[] args) throws IOException {
-        String pathImage = "D:\\College-ComputerScience\\4º Período\\Image-processing-and-computer-vision\\image-manipulation\\src\\assets\\chorma_key_image\\chorma_key_image_1.png";
+        String pathImage = "D:\\College-ComputerScience\\4-Periodo\\Image-processing-and-computer-vision\\image-manipulation-scripts\\src\\assets\\chorma_key_image\\chorma_key_image_1.png";
         BufferedImage image = ImageIO.read(new File(pathImage));
 
         int width = image.getWidth();
@@ -14,7 +14,7 @@ public class remove_element_image {
 
         BufferedImage newImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 
-        int limiar = 128;
+        int limiar = 90;
 
         for (int column = 0; column < width; column++) {
             for (int row = 0; row < height; row++) {

@@ -11,13 +11,13 @@ public class invertImageLeftToRight {
         int width = image.getWidth();
         int height = image.getHeight();
 
-        for (int column = 0; column < width / 2; column++) {
-            for (int line = 0; line < height; line++) {
-                int leftImagePixel = image.getRGB(column, line);
-                int rightImagePixel = image.getRGB(width - column - 1, line);
+        for (int x = 0; x < width / 2; x++) {
+            for (int y = 0; y < height; y++) {
+                int leftImagePixel = image.getRGB(x, y);
+                int rightImagePixel = image.getRGB(width - x - 1, y);
 
-                image.setRGB(column, line, rightImagePixel);
-                image.setRGB(width - column - 1, line, leftImagePixel);
+                image.setRGB(x, y, rightImagePixel);
+                image.setRGB(width - x - 1, y, leftImagePixel);
 
             }
         }

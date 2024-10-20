@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class binarizeImage {
     public static void main(String[] args) throws IOException {
-        String pathImage = "D:\\College-ComputerScience\\4º Período\\Image-processing-and-computer-vision\\image-manipulation\\src\\assets\\image.png";
+        String pathImage = "D:\\College-ComputerScience\\4-Periodo\\Image-processing-and-computer-vision\\image-manipulation-scripts\\src\\assets\\image.png";
         BufferedImage image = ImageIO.read(new File(pathImage));
 
         int width = image.getWidth();
@@ -26,7 +26,7 @@ public class binarizeImage {
 
                 int gray = (red + green + blue) / 3;
 
-                if (gray < limiar) {
+                if (gray > limiar) {
                     image.setRGB(column, row, new Color(0).getRGB());
                 } else {
                     image.setRGB(column, row, new Color(255, 255, 255).getRGB());
